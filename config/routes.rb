@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :registration, only: [:create]
+  get 'sign_up', to: 'registration#new'
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
