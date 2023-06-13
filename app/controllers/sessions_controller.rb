@@ -12,4 +12,13 @@ class SessionsController < ApplicationController
       render "new", status: :unprocessable_entity
     end
   end
+
+  def destroy
+    if session[:user_id]
+      session[:user_id] = nil if session[:user_id]
+      redirect_to login_path, notice: "Logged out successfully!"
+    else
+      render :new
+    end
+  end
 end

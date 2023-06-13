@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'login', to: "sessions#new"
+  get 'logout', to: "sessions#destroy" ,method: :DELETE
   resources :sessions, only: [:create]
   resources :registration, only: [:create]
   get 'sign_up', to: 'registration#new'
