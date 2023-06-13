@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'login', to: "sessions#new"
+  resources :sessions, only: [:create]
   resources :registration, only: [:create]
   get 'sign_up', to: 'registration#new'
   get 'home/index'
