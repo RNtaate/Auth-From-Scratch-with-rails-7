@@ -4,4 +4,12 @@ class User < ApplicationRecord
 
   validates :email, presence: true
   validates :password, presence: true, on: :create, confirmation: true
+
+  private
+  def encrypt_password
+    if password.present?
+      self.password_salt = BCrypt::Engine.generate_salt
+      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
+    end
+  end
 end
