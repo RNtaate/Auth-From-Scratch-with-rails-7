@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :confirm_already_signed_in?, only: [:new, :create]
   def new
   end
 
@@ -19,6 +20,14 @@ class SessionsController < ApplicationController
       redirect_to login_path, notice: "Logged out successfully!"
     else
       render :new
+    end
+  end
+
+  private
+
+  def confirm_already_signed_in?
+    if current_user
+      redirect_to root_path, notice: "You are already signed in."
     end
   end
 end
