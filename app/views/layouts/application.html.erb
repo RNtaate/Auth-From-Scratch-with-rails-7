@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -25,7 +25,7 @@
     </ul>
   </nav>
   <% flash.each do |type, msg|%>
-    <p><%= msg %></p>
+    <p class="flash-<%= type%>"><%= msg %></p>
   <% end %>
     <%= yield %>
   </body>
