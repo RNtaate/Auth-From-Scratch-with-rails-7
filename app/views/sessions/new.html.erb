@@ -1,0 +1,8 @@
+<h1>Login</h1>
+<p>Please log into your account here:</p>
+
+<%= form_tag sessions_path do%>
+  <%= email_field_tag :email, params[:email], placeholder: "Enter your email" %>
+  <%= password_field_tag :password, "", placeholder: "Enter your password" %>
+  <%= submit_tag "Login"%>
+<% end %>
