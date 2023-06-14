@@ -5,7 +5,7 @@
 
   <% if form.object.errors.any? %>
     <% form.object.errors.full_messages.each do |message|%>
-      <p><%= message %></p>
+      <p class="flash-alert"><%= message %></p>
     <% end %>
   <% end %>
 
