@@ -17,6 +17,7 @@ _Coming Soon_
 - Ruby 3.0.1
 - Ruby on Rails 7.0.5
 - [Simple CSS](https://simplecss.org/)
+- BCrypt 3.1.7
 
 ## Get started on your local machine
 
