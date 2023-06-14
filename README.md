@@ -8,6 +8,8 @@
 
 > It portrays a few functionalities such as **Sign up**, **Sign In**, and **Log Out** functionalities, authorization and restrication to access certain pages if not `logged in` or after `loggin in`.
 
+> <span style="color: red"> **!ATTENTION!** </span>: In this project, I intentionally forewent creating the **User Model** with a _`password_digest`_ column and including _`has_secure_password`_ in the model's class as it is required in the updated version of **BCrypt** because I wanted to practice manually setting up the _`password_salt`_ and _`password_hash`_ using the `BCrypt::Engine` and `password` information received from the view forms.
+
 ### Screenshots
 
 _Coming Soon_
